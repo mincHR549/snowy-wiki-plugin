@@ -1,0 +1,127 @@
+# SnowyGems 0.0.6 修订构建 Wiki 示例；保存到 gems/WikiExamples.yml
+
+示例赤心宝石:
+  Name: 示例赤心宝石
+  Material: REDSTONE
+  Display: "&c赤心宝石"
+  Tips:
+    - "&7穿戴对应盔甲时，生命上限 +2 点（1 颗心）"
+    - "&7每件最多 2 颗，与铁壁宝石互斥"
+  Require: [ARMOR]
+  Success: 100
+  Embed: 2
+  ExclusiveGroup: wiki-armor-path
+  TrackApplied: true
+  Rewards:
+    - "Attribute{name=health;operation=0;slot=auto;var=v+2;limit=4}"
+
+示例铁壁宝石:
+  Name: 示例铁壁宝石
+  Material: IRON_INGOT
+  Display: "&f铁壁宝石"
+  Tips:
+    - "&7穿戴对应盔甲时，护甲 +1"
+    - "&7每件最多 2 颗，与赤心宝石互斥"
+  Require: [ARMOR]
+  Success: 100
+  Embed: 2
+  ExclusiveGroup: wiki-armor-path
+  TrackApplied: true
+  Rewards:
+    - "Attribute{name=armor;operation=0;slot=auto;var=v+1;limit=2}"
+
+示例工匠修复石:
+  Name: 示例工匠修复石
+  Material: PRISMARINE_CRYSTALS
+  Display: "&a工匠修复石"
+  Tips:
+    - "&7修复最多 250 点已损失耐久"
+    - "&8一次性消耗，不生成可拆卸记录"
+  Require: [WEAPON, ARMOR, TOOL, SHIELD, FISHING_ROD]
+  Success: 100
+  TrackApplied: false
+  Rewards:
+    - "Durability{amount=250}"
+
+示例矿工夜视宝石:
+  Name: 示例矿工夜视宝石
+  Material: GOLDEN_CARROT
+  Display: "&e矿工夜视宝石"
+  Tips:
+    - "&7镶入头盔并戴在头上时持续获得夜视"
+  Require: [HELMET]
+  Success: 100
+  Embed: 1
+  TrackApplied: true
+  Rewards:
+    - "LoreAdd{lore=&e[BUFF] 示例矿工夜视;limit=1}"
+
+示例疾行宝石:
+  Name: 示例疾行宝石
+  Material: SUGAR
+  Display: "&b疾行宝石"
+  Tips:
+    - "&7镶入剑后，主手持剑潜行右键获得速度 II"
+    - "&7持续 5 秒，冷却 12 秒"
+  Require: [SWORD]
+  Success: 100
+  Embed: 1
+  TrackApplied: true
+  Rewards:
+    - "LoreAdd{lore=&b[技能] 示例疾行;limit=1}"
+
+示例静默粉尘:
+  Name: 示例静默粉尘
+  Material: GLOWSTONE_DUST
+  Display: "&7静默粉尘"
+  Tips:
+    - "&7隐藏装备上的 [技能] / [BUFF] 行，效果继续生效"
+    - "&8修改其他宝石前，先拆除此粉尘"
+  Require: [WEAPON, ARMOR, TOOL, SHIELD]
+  Success: 100
+  Embed: 1
+  TrackApplied: true
+  Rewards:
+    - "SkillToNBT"
+
+示例恒久宝石:
+  Name: 示例恒久宝石
+  Material: DIAMOND
+  Display: "&b恒久宝石"
+  Tips:
+    - "&7使装备无法破坏"
+  Require: [WEAPON, ARMOR, TOOL, SHIELD]
+  Success: 100
+  Embed: 1
+  TrackApplied: true
+  Rewards:
+    - "Unbreakable"
+
+示例隐纹宝石:
+  Name: 示例隐纹宝石
+  Material: INK_SAC
+  Display: "&8隐纹宝石"
+  Tips:
+    - "&7隐藏原版附魔说明，不移除附魔效果"
+  Require: [WEAPON, ARMOR, TOOL, SHIELD]
+  Success: 100
+  Embed: 1
+  TrackApplied: true
+  Rewards:
+    - "ItemFlag{HIDE_ENCHANTS}"
+
+示例探险宝石袋:
+  Name: 示例探险宝石袋
+  Type: RandomGem
+  Material: CHEST
+  Display: "&6探险宝石袋"
+  Tips:
+    - "&7右键随机获得本页的一颗示例宝石"
+  Success: 100
+  GiveItem: true
+  Gems:
+    示例赤心宝石: 30
+    示例铁壁宝石: 30
+    示例工匠修复石: 20
+    示例矿工夜视宝石: 10
+    示例疾行宝石: 10
