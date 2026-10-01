@@ -1,0 +1,55 @@
+# SnowyGems 0.0.8 示例。保存到 plugins/SnowyGems/gems/TwoLevelGems.yml 后执行 /sgem reload。
+# BUFF 宝石复用内置 skills/DefaultBuffs.yml 中的速度和力量定义。
+二级耐久宝石:
+  Name: 二级耐久宝石
+  Material: EMERALD
+  Display: "&b二级耐久宝石"
+  Require: [WEAPON, ARMOR, TOOL]
+  Tips:
+    - "&7耐久每次提升 2 级，最高 7 级"
+  Rewards:
+    - action: Enchant
+      name: DURABILITY
+      var: "v+2"
+      limit: 7
+
+二级锋利宝石:
+  Name: 二级锋利宝石
+  Material: REDSTONE
+  Display: "&c二级锋利宝石"
+  Require: [SWORD]
+  Tips:
+    - "&7锋利每次提升 2 级，最高 10 级"
+  Rewards:
+    - action: Enchant
+      name: DAMAGE_ALL
+      var: "v+2"
+      limit: 10
+
+二级速度BUFF宝石:
+  Name: 二级速度BUFF宝石
+  Material: SUGAR
+  Display: "&b二级速度BUFF宝石"
+  Require: [ARMOR]
+  Tips:
+    - "&7速度 BUFF 每次提升 2 级"
+  Rewards:
+    - action: LoreVar
+      lore: "&6&l[&c&lBUFF&6&l] &b&l速度"
+      var: "v+2"
+      format: "%.0f"
+      mode: "last"
+
+二级力量BUFF宝石:
+  Name: 二级力量BUFF宝石
+  Material: BLAZE_POWDER
+  Display: "&c二级力量BUFF宝石"
+  Require: [WEAPON]
+  Tips:
+    - "&7力量 BUFF 每次提升 2 级"
+  Rewards:
+    - action: LoreVar
+      lore: "&6&l[&c&lBUFF&6&l] &b&l力量"
+      var: "v+2"
+      format: "%.0f"
+      mode: "last"
